@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+  color: hsl(215, 51%, 70%);
+
+  background-color: hsl(217, 54%, 11%);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 35rem;
+  padding: 2.4rem 2.4rem 3.2rem 2.4rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 9px;
+  position: relative;
+}
+
+.equilibrium-img-container {
+  margin-bottom: 2.4rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.equilibrium-img {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+}
+
+.equilibrium-img-container::after {
+  content: url(../images/icon-view.svg);
+  position: absolute;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 255, 247, 0.5);
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: all 0.4s;
+}
+
+.equilibrium-img-container:hover::after {
+  opacity: 1;
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.85px;
+  margin-bottom: 2rem;
+}
+
+.sub-heading {
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.icons-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.etherium,
+.time {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.etherium-text {
+  color: hsl(178, 100%, 50%);
+}
+
+.time-text {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  padding-top: 1.6rem;
+  border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.user-img {
+  width: 3.5rem;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.user-content {
+  font-weight: 500;
+}
+
+.author {
+  color: hsl(0, 0%, 100%);
+}
+
+.heading,
+.author {
+  transition: all 0.3s;
+}
+
+.heading:hover,
+.author:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+@media (max-width: 376px) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    padding: 3.2rem;
+  }
+}
